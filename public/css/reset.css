@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 :root {
-  --red: #ff3838;
+  --red: #ff3838; 
+  --blue:#4f46e5;
 }
 
 * {
@@ -32,5 +33,5 @@ body {
 }
 
 section,header,footer {
-  padding: 2rem 7%;
+  padding: 2rem 7% !important;
 }
