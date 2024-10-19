@@ -1,12 +1,14 @@
 // Função para buscar os dados da API
 const getJson = async () => {
   try {
-    // let url = "/api/data";
-    let url = "https://landingpage-restaurante-three.vercel.app/api/data/";
-    let response = await fetch(url);
-    let { produtos } = await response.json(); // Assume que os produtos estão no array 'produtos'
+    const baseURL = window.location.hostname === "localhost" 
+    ? "http://localhost:3000" 
+    : "https://landingpage-restaurante-three.vercel.app";
+
+    const url = `${baseURL}/api/data/`;
+    const response = await fetch(url);
+    const { produtos } = await response.json();
     console.log(produtos);
-    // Chama a função para renderizar os produtos
     renderProducts(produtos);
   } catch (error) {
     console.log(`Error: ${error.message}`);
@@ -57,9 +59,6 @@ const renderProducts = (produtos) => {
     });
   });
 };
-
-
-
 
 /* Data e hora corrente 
 function updateDateTime() {
