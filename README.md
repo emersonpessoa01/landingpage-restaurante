@@ -22,7 +22,7 @@ Bem-vindo ao [Sabores Autênticos Website](https://landingpage-restaurante-three
 - [Sabores Autênticos](#sabores-autênticos)
 - [Como Visualizar o projeto localmente](#como-visualizar-o-projeto-localmente)
 - [APIs Utilizadas](#apis-utilizadas)
-- [Bibliotecas Externas Utilizadas](#bibliotecas-externas-recomendadas)
+- [Bibliotecas Externas Utilizadas](#bibliotecas-externas-utilizadas)
 
 <a href="#topo">Voltar ao Topo</a>
 
