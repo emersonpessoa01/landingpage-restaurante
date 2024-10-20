@@ -64,7 +64,7 @@ const renderAbout = (produtos) => {
   const aboutSection = document.getElementById("about");
 
   // Limpa a seção "Sobre" para evitar duplicações
-  aboutSection.innerHTML = '';
+  aboutSection.innerHTML = "";
 
   // Cria o título da seção
   const titleHTML = `
@@ -77,12 +77,10 @@ const renderAbout = (produtos) => {
 
   // Itera pelos produtos para preencher a seção "Sobre"
   produtos.forEach((produto) => {
-    const historia = produto.about; // Supondo que sua API retorna a história
-    const valores = produto.about.our_values; // Supondo que sua API retorna os valores
-    const equipe = produto.about.our_team; // Supondo que sua API retorna a equipe
-    const cta = produto.about.cta
-
-  
+    const historia = produto.about; //Para acessar os dados da hist´ria
+    const valores = produto.about.our_values; //Para acessar os dados dos valores
+    const equipe = produto.about.our_team; // Para acessar os dados da equipe
+    const cta = produto.about.cta; //Para acessar os dados do cta
 
     // Adiciona a história
     const historiaHTML = `
@@ -156,64 +154,36 @@ const renderAbout = (produtos) => {
     aboutSection.innerHTML += valoresHTML;
 
     // Adiciona a equipe
-    
     const equipeHTML = `
       <div class="mb-16">
         <h2 class="text-3xl font-bold mb-6 text-center" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="600">${equipe.title}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div
-            class="bg-white rounded-lg shadow-lg overflow-hidden"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="600"
-          >
-            <img src="${equipe.team1.image}" alt="Chef Maria Silva" class="w-full h-64 object-cover" width="300" height="300" />
-            <div class="p-4">
-              <h3 class="text-xl font-bold mb-2">${equipe.team1.name}</h3>
-              <p class="text-gray-600 mb-2">${equipe.team1.role}</p>
-              <p class="text-gray-700 lowercase first-letter-uppercase">
-                ${equipe.team1.description}
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-lg overflow-hidden"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="800"
-          >
-            <img src="${equipe.team2.image}" alt="Chef João Santos" class="w-full h-64 object-cover" width="300" height="300" />
-            <div class="p-4">
-              <h3 class="text-xl font-bold mb-2">${equipe.team2.name}</h3>
-              <p class="text-gray-600 mb-2">${equipe.team2.role}</p>
-              <p class="text-gray-700 lowercase first-letter-uppercase">
-                 ${equipe.team2.description}
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-lg overflow-hidden"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="1000"
-          >
-            <img
-              src="${equipe.team3.image}"
-              alt="Nutricionista Ana Oliveira"
-              class="w-full h-64 object-cover"
-              width="300"
-              height="300"
-            />
-            <div class="p-4">
-              <h3 class="text-xl font-bold mb-2">${equipe.team3.name}a</h3>
-              <p class="text-gray-600 mb-2">${equipe.team3.role}</p>
-              <p class="text-gray-700 lowercase first-letter-uppercase">
-              ${equipe.team3.description}
-              </p>
-            </div>
-          </div>
+          ${[1, 2, 3]
+            .map((index) => {
+              const team = equipe[`team${index}`]; // Acessa dinamicamente team1, team2, team3 com base no índice
+              return `
+                <div
+                  class="bg-white rounded-lg shadow-lg overflow-hidden"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-bottom"
+                  data-aos-delay="600"
+                >
+                  <img src="${team.image}" alt="${team.name}" class="w-full h-64 object-cover" width="300" height="300" />
+                  <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">${team.name}</h3>
+                    <p class="text-gray-600 mb-2">${team.role}</p>
+                    <p class="text-gray-700 lowercase first-letter-uppercase">
+                      ${team.description}
+                    </p>
+                  </div>
+                </div>
+              `;
+            })
+            .join("")}
+        </div>
       </div>
     `;
+
     aboutSection.innerHTML += equipeHTML;
 
     // Adiciona a seção "Junte-se a Nós"
@@ -231,7 +201,6 @@ const renderAbout = (produtos) => {
     aboutSection.innerHTML += junteSeHTML;
   });
 };
-
 
 /* Data e hora corrente 
 function updateDateTime() {
