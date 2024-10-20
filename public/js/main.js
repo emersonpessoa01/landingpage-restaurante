@@ -250,7 +250,7 @@ const renderTestimonials = (produtos) => {
   const testimonialSection = document.getElementById("testimonials");
 
   testimonialSection.innerHTML = "";
-  //Adiciona seção Depoimentos
+  // Adiciona seção Depoimentos
   produtos.forEach((produto) => {
     const testemunho = produto.testimonials;
     const testemunhoHTML = `
@@ -261,40 +261,40 @@ const renderTestimonials = (produtos) => {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         ${[1, 2, 3].map((index) => {
           let card = testemunho[`card${index}`];
+          // Cálculo do delay: 600ms + (index * 200ms)
+          const delay = 600 + (index - 1) * 200;
           return `
             <div
-          class="bg-gray-800 rounded-lg shadow-lg mt-10 mb-4 pt-16 pb-8 px-6 relative transform transition-transform duration-300 hover:translate-y-1 md:mb-0 card-hover border-8 border-solid border-white box"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-          data-aos-delay="600"
-        >
-          <img
-            src="${card.image}"
-            alt="Foto de Maria Silva, mulher sorrindo com cabelos castanhos"
-            class="w-28 h-28 rounded-full absolute -top-12 left-1/2 transform -translate-x-1/2 border-8 border-white shadow-md object-cover"
-          />
-          <div class="text-center d-flex flex-column justify-between gap-2">
-            <h3 class="text-xl font-bold text-gray-800 my-2">${card.name}</h3>
-            <div class="text-yellow-400 text-xl">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
+              class="bg-gray-800 rounded-lg shadow-lg mt-10 mb-4 pt-16 pb-8 px-6 relative transform transition-transform duration-300 hover:translate-y-1 md:mb-0 card-hover border-8 border-solid border-white box"
+              data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="${delay}"
+            >
+              <img
+                src="${card.image}"
+                alt="Foto de ${card.name}, mulher sorrindo com cabelos castanhos"
+                class="w-28 h-28 rounded-full absolute -top-12 left-1/2 transform -translate-x-1/2 border-8 border-white shadow-md object-cover"
+              />
+              <div class="text-center d-flex flex-column justify-between gap-2">
+                <h3 class="text-xl font-bold text-gray-800 my-2">${card.name}</h3>
+                <div class="text-yellow-400 text-xl">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <p class="text-gray-100 italic normal-case first-letter-uppercase">
+                  ${card.description}
+                </p>
+              </div>
             </div>
-            <p class="text-gray-100 italic normal-case first-letter-uppercase">
-              ${card.description}
-            </p>
-          </div>
-        </div>
           `;
         }).join("")}
-        
       </div>
     `;
     testimonialSection.innerHTML += testemunhoHTML;
   });
 };
+
 /* Data e hora corrente 
 function updateDateTime() {
   const now = new Date();
