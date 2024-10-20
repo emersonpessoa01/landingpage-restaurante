@@ -1,6 +1,6 @@
 # Projeto: Atividade 04 - Criação de uma Landing Page
 
-Bem-vindo ao `Sabores Autênticos Website`, uma landing page fictícia desenvolvido para fins de atividades e projetos de programação. Qualquer semelhança com sites reais é mera coincidência.
+Bem-vindo ao [Sabores Autênticos Website](https://landingpage-restaurante-three.vercel.app/), uma landing page fictícia desenvolvido para fins de atividades e projetos de programação. Qualquer semelhança com sites reais é mera coincidência.
 
 <div align="center" id="topo"></div>
 
@@ -18,6 +18,11 @@ Bem-vindo ao `Sabores Autênticos Website`, uma landing page fictícia desenvolv
 - [Bibliotecas Externas Recomendadas](#bibliotecas-externas-recomendadas)
 - [Link de Entrega](#link-de-entrega)
 - [Critérios de Avaliação](#critérios-de-avaliação)
+- [Visão Geral da Página](#visão-geral-da-página)
+- [Sabores Autênticos](#sabores-autênticos)
+- [Como Visualizar o projeto localmente](#como-visualizar-o-projeto-localmente)
+- [APIs Utilizadas](#apis-utilizadas)
+- [Bibliotecas Externas Utilizadas](#bibliotecas-externas-recomendadas)
 
 <a href="#topo">Voltar ao Topo</a>
 
@@ -121,10 +126,13 @@ Bem-vindo ao `Sabores Autênticos Website`, uma landing page fictícia desenvolv
 5. [x] **Acessibilidade e Semântica:** Verificar se foram seguidas as boas práticas de acessibilidade e uso de tags semânticas no HTML.
 
 ---
+<a href="#topo">Voltar ao Topo</a>
 
 ## Visão Geral da Página
 
-<img src="./public/image/image-preview.webp" width="1200px">
+<img src="./public/image/preview.webp" width="1200px">
+
+<a href="#topo">Voltar ao Topo</a>
 
 # Sabores Autênticos
 
@@ -132,7 +140,7 @@ Uma breve descrição do projeto.
 > [!IMPORTANT]
 > 
 > No projeto foi utilizado Bootstrap apenas no Header e Tailwind em todas as seções
-> Metatags Open Graph: foi incluído boas práticas de metatags para otimização de redes sociais, como og:title, og:description, e og:image, o que ajuda a melhorar a forma como a página é compartilhada.
+> Metatags Open Graph: foi incluído boas práticas de metatags para otimização de redes sociais, como `og:title`, `og:description`, e `og:image`, o que ajuda a melhorar a forma como a página é compartilhada.
 
 A página exibida é uma landing page de restaurante chamada "Sabores Autênticos", projetada para apresentar informações sobre o estabelecimento e seus serviços de maneira organizada e visualmente atraente.<br>
 
@@ -147,6 +155,8 @@ Um banner em destaque com a chamada "Descubra O Sabor Da Nossa Comida" e um bot�
 - Peça Agora: Formulário de contato para realizar pedidos, com campos para nome, e-mail e mensagem.<br>
 - Rodapé: Inclui links para redes sociais, informações da empresa, links úteis e opções de loja online, finalizando com os direitos autorais.<br>
 - A página possui um design moderno e organizado, usando cores e imagens para criar um ambiente convidativo e fácil de navegar.<br>
+
+<a href="#topo">Voltar ao Topo</a>
 
 ## Como Visualizar o Projeto Localmente
 
@@ -176,6 +186,8 @@ Um banner em destaque com a chamada "Descubra O Sabor Da Nossa Comida" e um bot�
    npm start
    ```
 5. **Acesse o projeto no seu navegador: O projeto estará disponível em: http://localhost:3000.**
+
+<a href="#topo">Voltar ao Topo</a>
 
 ## APIs Utilizadas
 
