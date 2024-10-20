@@ -139,7 +139,7 @@ Bem-vindo ao [Sabores Autênticos Website](https://landingpage-restaurante-three
 Uma breve descrição do projeto.
 > [!IMPORTANT]
 > 
-> No projeto foi utilizado Bootstrap apenas no Header e Tailwind em todas as seções
+> No projeto foi utilizado Bootstrap apenas no Header e Tailwind em todas as seções.<br>
 > Metatags Open Graph: foi incluído boas práticas de metatags para otimização de redes sociais, como `og:title`, `og:description`, e `og:image`, o que ajuda a melhorar a forma como a página é compartilhada.
 
 A página exibida é uma landing page de restaurante chamada "Sabores Autênticos", projetada para apresentar informações sobre o estabelecimento e seus serviços de maneira organizada e visualmente atraente.<br>
