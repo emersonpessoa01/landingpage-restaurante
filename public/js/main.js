@@ -9,6 +9,7 @@ const getJson = async () => {
     console.log(produtos);
     renderProducts(produtos);
     renderAbout(produtos);
+    renderSpeciality(produtos);
   } catch (error) {
     console.log(`Error: ${error.message}`);
   }
@@ -17,7 +18,7 @@ const getJson = async () => {
 // Executa a função de busca de dados
 getJson();
 
-// ====================== Função para renderizar os produtos da Section Home================
+// ====================== Função da Section Home================
 const renderProducts = (produtos) => {
   const swiperWrapper = document.querySelector(".swiper-wrapper");
 
@@ -59,7 +60,7 @@ const renderProducts = (produtos) => {
   });
 };
 
-// Função para renderizar a seção "Sobre"
+// ====================== Função da Section Sobre ================
 const renderAbout = (produtos) => {
   const aboutSection = document.getElementById("about");
 
@@ -199,6 +200,48 @@ const renderAbout = (produtos) => {
       </div>
     `;
     aboutSection.innerHTML += junteSeHTML;
+  });
+};
+
+// =================== Função Section Nossa Especialidade ================
+const renderSpeciality = (produtos) => {
+  const specialitySection = document.getElementById("speciality");
+
+  specialitySection.innerHTML = "";
+  //Adiciona seção Nossa Especialiade
+
+  produtos.forEach((produto) => {
+    const especialidade = produto.our_speciality;
+    const specialityHTML = `
+      <div class="container">
+        <h2 class="text-center text-3xl bordered-title my-10">
+          Nossa
+          <span class="text-danger bordered-title p-0 m-0 font-bold">Especialidade</span>
+        </h2>
+        <div class="row mb-10">
+        ${[1, 2, 3, 4, 5, 6]
+          .map((index) => {
+            const card = especialidade[`card${index}`];
+            return `
+          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">
+            <div class="card">
+              <img src="${card.image}" alt=${card.title} title=${card.title} class="card-img-top" />
+              <div class="card-body">
+                <img src="${card.icon}" class="icon" alt=${card.title} title=${card.title} />
+                <h5 class="card-title">${card.title}</h5>
+                <p class="card-text text-center text-gray-700">
+                  ${card.description}
+                </p>
+              </div>
+            </div>
+          </div>
+          `;
+          })
+          .join("")} 
+        </div>
+      </div>
+    `;
+    specialitySection.innerHTML += specialityHTML;
   });
 };
 
