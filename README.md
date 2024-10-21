@@ -130,7 +130,7 @@ Bem-vindo ao [Sabores Autênticos Website](https://landingpage-restaurante-three
 
 ## Visão Geral da Página
 
-<img src="./public/image/preview2.webp" width="1200px">
+<img src="./public/image/preview3.webp" width="1200px">
 
 <a href="#topo">Voltar ao Topo</a>
 
