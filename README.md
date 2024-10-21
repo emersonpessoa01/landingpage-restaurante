@@ -257,7 +257,7 @@ Um banner em destaque com a chamada "Descubra O Sabor Da Nossa Comida" e um bot�
 ```
 
 - `Fonte UniSans`:<br>
-  A fonte UniSans é uma fonte personalizada incluída no projeto através da regra @font-face. Essa técnica permite que a fonte seja carregada diretamente de arquivos locais, garantindo que ela seja aplicada uniformemente em diferentes dispositivos, independentemente de o usuário ter essa fonte instalada em seu sistema.
+  A [fonte UniSans](https://www.freebestfonts.com/uni-sans-font) é uma fonte personalizada incluída no projeto através da regra @font-face. Essa técnica permite que a fonte seja carregada diretamente de arquivos locais, garantindo que ela seja aplicada uniformemente em diferentes dispositivos, independentemente de o usuário ter essa fonte instalada em seu sistema.
 
 ```bash
 @font-face {
