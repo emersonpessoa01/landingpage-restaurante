@@ -12,6 +12,7 @@ const getJson = async () => {
     renderSpeciality(produtos);
     renderTestimonials(produtos);
     renderService(produtos);
+    renderWorks(produtos)
   } catch (error) {
     console.log(`Error: ${error.message}`);
   }
@@ -345,6 +346,48 @@ const renderService = (produtos) => {
       </div>
     `;
     serviceSction.innerHTML += serviceHTML;
+  });
+};
+
+// ================== Função Section Funcionamento ================
+const renderWorks = (produtos) => {
+  const workSection = document.getElementById("works");
+  workSection.innerHTML = "";
+  // Adiciona seção Funcionamento
+  produtos.forEach((produto) => {
+    const funcionamento = produto.works;
+    const formaPagamento = produto.works.payment_method;
+
+    const workHTML = `
+      <div class="container">
+        <h2 class="text-center mb-5 text-3xl" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">Como <span class="text-danger">funciona</span></h2>
+        <div class="row">
+          ${[1, 2, 3, 4]
+            .map((index) => {
+              let card = funcionamento[`card${index}`];
+              return `
+              <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">
+              <!-- <i class="fas fa-hamburger step-icon mb-3"></i> -->
+              <img src="${card.image}" alt="" srcset="" />
+              <h4 class="normal-case">${card.title}</h4>
+              </div>
+            `;
+            })
+            .join("")}
+        </div>
+      </div>
+    `;
+    workSection.innerHTML += workHTML;
+
+    const paymentHTML = `
+      <div class="container mx-auto px-4">
+        <h2 class="text-center mb-5 text-3xl normal-case" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">Formas de <span class="text-danger">Pagamento</span></h2>
+        <div class="flex justify-center items-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="800">
+          <img src="${formaPagamento.image}" alt="Formas de pagamento" class="w-full max-w-xl border-1 rounded-2">
+        </div>
+      </div>
+    `;
+    workSection.innerHTML += paymentHTML;
   });
 };
 
