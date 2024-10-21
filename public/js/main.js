@@ -365,8 +365,10 @@ const renderWorks = (produtos) => {
           ${[1, 2, 3, 4]
             .map((index) => {
               let card = funcionamento[`card${index}`];
+              // Cálculo do delay: 600ms + (index * 200ms)
+              let delay = 600 + (index - 1) * 200;
               return `
-              <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">
+              <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay=${delay}>
               <!-- <i class="fas fa-hamburger step-icon mb-3"></i> -->
               <img src="${card.image}" alt="" srcset="" />
               <h4 class="normal-case">${card.title}</h4>
