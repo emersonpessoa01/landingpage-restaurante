@@ -11,6 +11,7 @@ const getJson = async () => {
     renderAbout(produtos);
     renderSpeciality(produtos);
     renderTestimonials(produtos);
+    renderService(produtos);
   } catch (error) {
     console.log(`Error: ${error.message}`);
   }
@@ -163,12 +164,15 @@ const renderAbout = (produtos) => {
           ${[1, 2, 3]
             .map((index) => {
               const team = equipe[`team${index}`]; // Acessa dinamicamente team1, team2, team3 com base no índice
+              // Cálculo do delay: 600ms + (index * 200ms)
+              const delay = 600 + (index - 1) * 200;
+
               return `
                 <div
                   class="bg-white rounded-lg shadow-lg overflow-hidden"
                   data-aos="fade-up"
                   data-aos-anchor-placement="center-bottom"
-                  data-aos-delay="600"
+                  data-aos-delay=${delay}
                 >
                   <img src="${team.image}" alt="${team.name}" class="w-full h-64 object-cover" width="300" height="300" />
                   <div class="p-4">
@@ -246,6 +250,8 @@ const renderSpeciality = (produtos) => {
   });
 };
 
+// =================== Função Section Testemunhos  ================
+
 const renderTestimonials = (produtos) => {
   const testimonialSection = document.getElementById("testimonials");
 
@@ -259,11 +265,12 @@ const renderTestimonials = (produtos) => {
         <span class="text-danger bordered-title p-0 m-0 font-bold">clientes</span>
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        ${[1, 2, 3].map((index) => {
-          let card = testemunho[`card${index}`];
-          // Cálculo do delay: 600ms + (index * 200ms)
-          const delay = 600 + (index - 1) * 200;
-          return `
+        ${[1, 2, 3]
+          .map((index) => {
+            let card = testemunho[`card${index}`];
+            // Cálculo do delay: 600ms + (index * 200ms)
+            const delay = 600 + (index - 1) * 200;
+            return `
             <div
               class="bg-gray-800 rounded-lg shadow-lg mt-10 mb-4 pt-16 pb-8 px-6 relative transform transition-transform duration-300 hover:translate-y-1 md:mb-0 card-hover border-8 border-solid border-white box"
               data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="${delay}"
@@ -288,10 +295,56 @@ const renderTestimonials = (produtos) => {
               </div>
             </div>
           `;
-        }).join("")}
+          })
+          .join("")}
       </div>
     `;
     testimonialSection.innerHTML += testemunhoHTML;
+  });
+};
+
+// ================== Função Section Serviços ================
+const renderService = (produtos) => {
+  const serviceSction = document.getElementById("service");
+  serviceSction.innerHTML = "";
+  // Adiciona seção Serviços
+  produtos.forEach((produto) => {
+    const servico = produto.our_services;
+    const serviceHTML = `
+      <h2 class="text-center text-3xl bordered-title mb-10">
+        Nossos
+        <span class="text-danger bordered-title p-0 m-0 font-bold">Serviços</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      ${[1, 2, 3]
+        .map((index) => {
+          let card = servico[`card${index}`];
+          // Cálculo do delay: 600ms + (index * 200ms)
+          const delay = 600 + (index - 1) * 200;
+
+          return `
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay=${delay}>
+          <div class="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">${card.title}</h3>
+          <p class="text-gray-600 normal-case">
+            ${card.description}
+          </p>
+        </div>
+        `;
+        })
+        .join("")}
+      </div>
+    `;
+    serviceSction.innerHTML += serviceHTML;
   });
 };
 
