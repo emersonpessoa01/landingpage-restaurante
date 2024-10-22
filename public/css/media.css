@@ -56,7 +56,7 @@
   }
   .card-text {
     /* width: 75% !important; */
-    font-size: 18px;
+    font-size: 18px !important;
   }
 }
 
