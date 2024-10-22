@@ -131,13 +131,4 @@ p.card-text.text-center.text-gray-700 {
   font-size: 19px !important;
 }
 
-@media (max-width: 768px) {
-  .card-text {
-    width: 75% !important;
-  }
-}
-@media (max-width: 480px) {
-  .card-text {
-    width: 100% !important;
-  }
-}
+
