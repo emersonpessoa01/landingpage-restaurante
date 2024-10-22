@@ -205,14 +205,18 @@ O arquivo `vercel.json` serve para dizer à Vercel como direcionar as rotas. Seg
   "version": 2,
   "builds": [
     {
-      "src": "api/produtos.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/produtos",
-      "dest": "/api/produtos.js"
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
 }
