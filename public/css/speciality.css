@@ -127,6 +127,9 @@ h5.card-title {
 .card-text:last-child {
   text-transform: none;
 }
+p.card-text.text-center.text-gray-700 {
+  font-size: 18px !important;
+}
 
 @media (max-width: 768px) {
   .card-text {
