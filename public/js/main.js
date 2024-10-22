@@ -383,7 +383,7 @@ const renderWorks = (produtos) => {
 
     const paymentHTML = `
       <div class="container mx-auto px-4">
-        <h2 class="text-center mb-5 text-3xl normal-case" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">Formas de <span class="text-danger">Pagamento</span></h2>
+        <h2 class="text-center my-5 text-3xl normal-case" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="600">Formas de <span class="text-danger">Pagamento</span></h2>
         <div class="flex justify-center items-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="800">
           <img src="${formaPagamento.image}" alt="Formas de pagamento" class="w-full max-w-xl border-1 rounded-2">
         </div>
