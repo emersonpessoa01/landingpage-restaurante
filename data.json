@@ -6,24 +6,24 @@
           "id": 1,
           "title": "Café da Manhã",
           "description": "Descubra o sabor da nossa comida",
-          "image": "https://i.im.ge/2024/09/30/ka5Fop.s-img-6.jpeg"
+          "image": "https://i.imgur.com/7ZbY2qm.jpeg"
         },
         "slide2": {
           "id": 2,
           "title": "Cheeseburger Duplo",
           "description": "Uma experiência gastronômica inigualável",
-          "image": "https://i.im.ge/2024/09/30/ka0Sk6.p-1.jpeg"
+          "image": "https://i.imgur.com/e67lq0X.jpeg"
         },
         "slide3": {
           "id": 3,
           "title": "Pizza",
           "description": "Venha saborear o melhor da culinária",
-          "image": "https://i.im.ge/2024/09/30/ka04hX.s-img-2.jpeg"
+          "image": "https://i.imgur.com/tQo0wPy.jpeg"
         }
       },
       "about": {
         "title": "Nossa História",
-        "team_cooks": "https://i.im.ge/2024/10/19/kEo3I4.cooks.webp",
+        "team_cooks": "https://i.imgur.com/vmww0Di.jpeg",
         "paragraph1": "Fundado em 2010, o Sabores Autênticos nasceu da paixão de um grupo de amigos pela culinária tradicional brasileira. Nossa missão é preservar e compartilhar as receitas que fazem parte da rica herança gastronômica do Brasil.",
         "paragraph2": "Ao longo dos anos, nos dedicamos a pesquisar, testar e aperfeiçoar receitas de todas as regiões do país, buscando sempre manter a autenticidade dos pratos e, ao mesmo tempo, torná-los acessíveis para cozinheiros de todos os níveis.",
         "our_values": {
