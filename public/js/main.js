@@ -12,8 +12,7 @@ const getJson = async () => {
     renderSpeciality(produtos);
     renderTestimonials(produtos);
     renderService(produtos);
-    renderWorks(produtos);
-    renderPopular(produtos);
+    renderWorks(produtos)
   } catch (error) {
     console.log(`Error: ${error.message}`);
   }
@@ -249,47 +248,6 @@ const renderSpeciality = (produtos) => {
       </div>
     `;
     specialitySection.innerHTML += specialityHTML;
-  });
-};
-
-// =================== Função Section Mais Populares ================
-
-const renderPopular = (produtos) => {
-  const swiperWrapperPopular = document.getElementById("swiper-wrapper-popular");
-
-  //Percorrer cada produto na lista de produtos
-  produtos.forEach((produto) => {
-    //Acessa o conteúdo de cada slide dentro do container swipper-container
-    const slides = produto.dishes_popular;
-
-    //Cria os slides com base nos dados do produto
-    Object.values(slides).forEach((slide) => {
-      const slideHTML = `
-        <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-          <div class="overflow-hidden">
-            <img
-              src="${slide.image}"
-              alt="Cheeseburger Duplo"
-              title="Cheeseburger Duplo"
-              class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-            />
-          </div>
-          <div class="p-6 text-center">
-            <h5 class="text-xl font-semibold mb-2">${slide.title}</h5>
-            <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">${slide.price}</p>
-            <div class="mb-2">
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-            </div>
-            <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">${slide.title_link}</a>
-          </div>
-        </div>
-      `;
-      swiperWrapperPopular.innerHTML += slideHTML;
-    });
   });
 };
 
