@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    
     <!-- Navbar -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -88,12 +89,13 @@
         </div>
       </nav>
     </header>
+
     <!-- HomeSection -->
     <section id="home">
       <div class="w-full relative" id="content">
         <div class="swiper default-carousel swiper-container">
           <div class="swiper-wrapper">
-            <!-- Slide 1, Slide 2, Slide3 inserindo pelo JS -->
+            <!-- Slide 1, Slide 2, Slide3 inserido pelo JS -->
           </div>
 
           <div class="flex items-center gap-4 lg:justify-start justify-center">
@@ -127,10 +129,12 @@
     <section class="mx-auto my-10 px-8" id="about">
       <!-- Conteúdo inserido dinamicamente pelo JavaScript -->
     </section>
+
     <!-- Especialidade -->
     <section id="speciality" class="mx-auto mt-8 px-8 py-6 bg-light">
       <!-- Conteúdo inserido dinamicamente pelo JavaScript -->
     </section>
+
     <!-- Popular Section -->
     <section class="bg-gray-10 mx-auto mt-8 px-8 py-6" id="popular">
       <h2 class="text-center text-3xl bordered-title mb-10">
@@ -139,150 +143,8 @@
       </h2>
       <!-- Swiper Container -->
       <div class="swiper-container slider-2 overflow-hidden">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-            <div class="overflow-hidden">
-              <img
-                src="./image/cheeseburger-duplo.webp"
-                alt="Cheeseburger Duplo"
-                title="Cheeseburger Duplo"
-                class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h5 class="text-xl font-semibold mb-2">Cheeseburg Saboroso</h5>
-              <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">R$15 - R$30</p>
-              <div class="mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-              </div>
-              <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Peça agora</a>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-            <div class="overflow-hidden">
-              <img
-                src="./image/bolo-tangerina.webp"
-                alt="Bolo Tangerina"
-                title="Bolo Tangerina"
-                class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h5 class="text-xl font-semibold mb-2 normal-case">Bolo Tangerina</h5>
-              <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">R$15 - R$30</p>
-              <div class="mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-              </div>
-              <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Peça agora</a>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-            <div class="overflow-hidden">
-              <img
-                src="./image/namkeen.webp"
-                alt="Namkeen"
-                title="Namkeen"
-                class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h5 class="text-xl font-semibold mb-2 normal-case">Namkeen</h5>
-              <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">R$15 - R$30</p>
-              <div class="mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-              </div>
-              <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Peça agora</a>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-            <div class="overflow-hidden">
-              <img
-                src="./image/muffin-gotas-chocolate.webp"
-                alt="Muffin Gotas Chocolate"
-                title="Muffin de Gotas de Chocolate"
-                class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h5 class="text-xl font-semibold mb-2 normal-case">Muffin de Chocolate</h5>
-              <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">R$15 - R$30</p>
-              <div class="mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-              </div>
-              <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Peça agora</a>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-            <div class="overflow-hidden">
-              <img
-                src="./image/sucos-frutas.webp"
-                alt="Suco de Frutas"
-                title="Sucos de Frutas"
-                class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h5 class="text-xl font-semibold mb-2 normal-case">Sucos Gelados</h5>
-              <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">R$15 - R$30</p>
-              <div class="mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-              </div>
-              <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Peça agora</a>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden relative">
-            <div class="overflow-hidden">
-              <img
-                src="./image/sorverte-1.webp"
-                alt="Sorvetes Gelados"
-                title="Sorvetes Gelados"
-                class="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-            <div class="p-6 text-center">
-              <h5 class="text-xl font-semibold mb-2 normal-case">Sorvetes Gelados</h5>
-              <p class="text-gray-600 absolute top-3 p-2 bg-red-500 text-white rounded-lg">R$15 - R$30</p>
-              <div class="mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-              </div>
-              <a href="#contact" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">Peça agora</a>
-            </div>
-          </div>
+        <div class="swiper-wrapper" id="swiper-wrapper-popular">
+          <!-- Slides inseridos pelo JS -->
         </div>
 
         <!-- Swiper Navigation Buttons -->
@@ -295,15 +157,14 @@
 
     <!-- Serviços -->
     <section class="bg-white mx-auto mt-8 px-8 py-6" id="service">
-      <!-- Conteúdo isnerido pelo JS -->
+      <!-- Conteúdo inserido pelo JS -->
     </section>
 
     <!-- Como funciona -->
     <section class="py-5 bg-white" id="works">
-      <!-- Conteúdo do Como funciona inderido pelo JS -->
-       <!-- ========================================= -->
+      <!-- Conteúdo do Como funciona inserido pelo JS -->
+      <!-- ========================================= -->
       <!-- Conteúdo do Forma de pagamento inserido pelo JS-->
-      
     </section>
     <!-- Testemonials -->
     <section class="bg-gray-10 mx-auto mt-8 px-8 py-6" id="testimonials">
