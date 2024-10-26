@@ -1,3 +1,15 @@
+#footer {
+  background-image: url("../image/home-bg-remove.png"); /* Verifique o caminho */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 68px !important;
+}
+
 footer .text-red-500 {
   font-size: 1.25rem !important;
 }
